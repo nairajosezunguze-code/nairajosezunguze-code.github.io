@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -5,51 +6,449 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="Naira José Mateus Zunguze">
-  <meta name="description" content="Conheça a monografia de Naira José Mateus Zunguze sobre o desenvolvimento de um sistema móvel para localização e avaliação de restaurantes no distrito de Massinga, Moçambique.">
+  <meta name="description" content="Monografia de Naira José Mateus Zunguze, na área de Engenharia Informática: desenvolvimento de um sistema para dispositivos móveis de localização e avaliação de restaurantes, caso de estudo do distrito de Massinga, Moçambique.">
 
-  <title>Monografia de Naira José Mateus Zunguze | Localização e Avaliação de Restaurantes</title>
+  <meta name="theme-color" content="#103b32">
+
+  <title>Monografia de Naira José Mateus Zunguze | Distrito de Massinga</title>
+
+  <style>
+    :root {
+      --green: #103b32;
+      --green-light: #1c5a49;
+      --gold: #c5a46d;
+      --cream: #f7f6f0;
+      --white: #ffffff;
+      --text: #263b35;
+      --muted: #68766f;
+      --border: #e5e9e2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--green);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .back-link {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .back-link:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      background:
+        radial-gradient(
+          ellipse at 90% 10%,
+          rgba(197, 164, 109, 0.2),
+          transparent 38%
+        ),
+        linear-gradient(135deg, #103b32, #174d40);
+      color: var(--white);
+      padding: 85px 0 80px;
+    }
+
+    .eyebrow {
+      color: #dfc394;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      max-width: 850px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #dfc394;
+    }
+
+    .hero p {
+      color: #dbe6df;
+      max-width: 680px;
+      font-size: 16px;
+    }
+
+    .author {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #dfc394;
+      font-weight: 600;
+    }
+
+    main {
+      padding: 65px 0 80px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 35px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 38px;
+      box-shadow: 0 12px 35px rgba(16, 59, 50, 0.05);
+    }
+
+    .document {
+      min-height: 220px;
+      background: var(--green);
+      color: #dfc394;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px;
+    }
+
+    .document .symbol {
+      font-size: 54px;
+      line-height: 1;
+    }
+
+    .document strong {
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f6efdf;
+      color: #765b2d;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .publication h2 {
+      color: var(--green);
+      font-size: clamp(23px, 3vw, 31px);
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 22px;
+      font-size: 15px;
+    }
+
+    .publication p {
+      color: #59675f;
+      margin-bottom: 18px;
+    }
+
+    .details {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+      margin: 22px 0;
+    }
+
+    .details p {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    .details p:last-child {
+      margin-bottom: 0;
+    }
+
+    .details strong {
+      color: var(--green);
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 19px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .btn-green:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--green);
+      color: var(--green);
+    }
+
+    .btn-outline:hover {
+      background: #edf3ed;
+    }
+
+    .note {
+      background: #edf3ed;
+      border-left: 3px solid var(--gold);
+      padding: 20px 22px;
+      margin-top: 30px;
+      border-radius: 0 6px 6px 0;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    footer {
+      background: #0b2b25;
+      color: #c4d1c9;
+      padding: 25px 0;
+      font-size: 12px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        min-height: 70px;
+      }
+
+      .brand {
+        font-size: 14px;
+      }
+
+      .back-link {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      main {
+        padding: 40px 0 55px;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+        padding: 23px;
+        gap: 25px;
+      }
+
+      .document {
+        min-height: 130px;
+      }
+
+      .document .symbol {
+        font-size: 40px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
   <header>
-    <a href="index.html">Voltar ao site pessoal</a>
+    <nav class="container">
+      <a class="brand" href="./index.html">
+        NZ<span>.</span> PORTFÓLIO
+      </a>
+
+      <a class="back-link" href="./index.html">
+        ← Voltar ao site principal
+      </a>
+    </nav>
   </header>
 
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Publicação académica</div>
+
+      <h1>
+        A minha <span>monografia</span>
+      </h1>
+
+      <p>
+        Investigação académica na área de Engenharia Informática,
+        dedicada ao desenvolvimento de soluções móveis para
+        localização e avaliação de restaurantes.
+      </p>
+
+      <div class="author">
+        Autora: Naira José Mateus Zunguze
+      </div>
+    </div>
+  </section>
+
   <main>
-    <h1>Monografia de Naira José Mateus Zunguze</h1>
+    <div class="container">
 
-    <h2>Desenvolvimento de um sistema para dispositivos móveis de localização e avaliação de restaurantes: caso de estudo — distrito de Massinga</h2>
+      <article class="publication">
 
-    <p>
-      Esta página apresenta o trabalho académico desenvolvido
-      na área de Engenharia Informática e Tecnologias,
-      dedicado ao desenvolvimento de um sistema para dispositivos
-      móveis destinado à localização e avaliação de restaurantes
-      no distrito de Massinga, Moçambique.
-    </p>
+        <div class="document">
+          <div class="symbol">▤</div>
+          <strong>MONOGRAFIA</strong>
+          <span>Documento académico</span>
+        </div>
 
-    <h2>Sobre o trabalho</h2>
+        <div class="publication-content">
+          <span class="tag">Trabalho académico</span>
 
-    <p>
-      A monografia aborda a utilização de tecnologias móveis
-      para facilitar a localização de restaurantes e permitir
-      a avaliação dos estabelecimentos pelos utilizadores.
-    </p>
+          <h2>
+            Desenvolvimento de um sistema para dispositivos
+            móveis de localização e avaliação de restaurantes:
+            caso de estudo — distrito de Massinga
+          </h2>
 
-    <h2>Consultar a monografia</h2>
+          <p class="subtitle">
+            Engenharia Informática e Tecnologias
+          </p>
 
-    <p>
-      O documento integral pode ser consultado através do link abaixo.
-    </p>
+          <p>
+            Esta monografia apresenta o desenvolvimento de um
+            sistema para dispositivos móveis destinado a facilitar
+            a localização e a avaliação de restaurantes no distrito
+            de Massinga, em Moçambique.
+          </p>
 
-    <p>
-      <a href="./Monografia%20Naira%20-%20pdf.pdf" target="_blank" rel="noopener">
-        Abrir monografia em PDF
-      </a>
-    </p>
+          <p>
+            Este trabalho integra o meu percurso académico e
+            representa a aplicação de conhecimentos de tecnologia
+            e sistemas de informação na procura de soluções digitais.
+          </p>
+
+          <div class="details">
+            <p>
+              <strong>Autora:</strong>
+              Naira José Mateus Zunguze
+            </p>
+
+            <p>
+              <strong>Área:</strong>
+              Engenharia Informática
+            </p>
+
+            <p>
+              <strong>Local do estudo:</strong>
+              Distrito de Massinga, Moçambique
+            </p>
+          </div>
+
+          <div class="buttons">
+            <a
+              class="btn btn-green"
+              href="./Monografia%20Naira%20-%20pdf.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar monografia em PDF ↗
+            </a>
+
+            <a class="btn btn-outline" href="./index.html">
+              ← Voltar à página principal
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+      <div class="note">
+        <strong>Nota:</strong> o documento PDF está disponível
+        através do repositório deste site. Se o ficheiro tiver
+        outro nome, actualiza o endereço do botão para corresponder
+        ao nome exacto do PDF no GitHub.
+      </div>
+
+    </div>
   </main>
 
   <footer>
-    <p>Naira José Mateus Zunguze · Moçambique</p>
+    <div class="container footer-content">
+      <span>Naira José Mateus Zunguze</span>
+      <span>Portfólio profissional · 2026</span>
+    </div>
   </footer>
+
 </body>
 </html>
