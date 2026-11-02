@@ -498,39 +498,355 @@
 .project-btn .arrow {
   font-size: 20px;
 }
+body {
+  background: #f8f9f6;
+  color: #263b35;
+}
+
+header {
+  box-shadow: 0 4px 20px rgba(16,59,50,0.05);
+}
+
+nav {
+  min-height: 82px;
+}
+
+.brand {
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.nav-links a {
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  padding: 115px 0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(197,164,109,.2), transparent 30%),
+    linear-gradient(120deg, #0b3028, #174d40 65%, #1b5948);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.5fr .7fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.hero h1 {
+  max-width: 750px;
+  font-size: clamp(42px, 6vw, 68px);
+}
+
+.hero p {
+  line-height: 1.9;
+}
+
+.hero-panel {
+  border: 1px solid rgba(255,255,255,.2);
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.hero-panel h3 {
+  color: #e0c28e;
+  margin-bottom: 15px;
+  font-size: 19px;
+}
+
+.hero-panel p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.hero-panel .panel-line {
+  height: 1px;
+  background: rgba(255,255,255,.2);
+  margin: 17px 0;
+}
+
+.hero-panel strong {
+  color: #e0c28e;
+}
+
+section {
+  padding: 95px 0;
+}
+
+.section-label {
+  letter-spacing: 3px;
+}
+
+.section-title {
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.about-grid {
+  align-items: center;
+  gap: 65px;
+}
+
+.about-copy p {
+  line-height: 1.95;
+  font-size: 15px;
+}
+
+.quote {
+  padding: 38px;
+  box-shadow: 0 15px 45px rgba(16,59,50,.07);
+  line-height: 1.8;
+  font-size: 21px;
+  border-radius: 4px 15px 15px 4px;
+}
+
+.quote small {
+  display: block;
+  font-size: 12px;
+  color: #9b7b45;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.areas {
+  background: #fff;
+}
+
+.cards {
+  gap: 25px;
+}
+
+.card {
+  padding: 34px 28px;
+  border-radius: 12px;
+  min-height: 250px;
+  box-shadow: 0 8px 30px rgba(16,59,50,.035);
+}
+
+.card:hover {
+  border-color: #c5a46d;
+  transform: translateY(-7px);
+  box-shadow: 0 20px 40px rgba(16,59,50,.09);
+}
+
+.card-icon {
+  width: 55px;
+  height: 55px;
+  font-size: 26px;
+  border-radius: 12px;
+}
+
+.card p {
+  line-height: 1.8;
+}
+
+.publications {
+  background: #f1f3ed;
+}
+
+.publication-card {
+  max-width: 950px;
+  padding: 38px;
+  border-radius: 13px;
+  box-shadow: 0 12px 35px rgba(16,59,50,.05);
+}
+
+.document-icon {
+  width: 95px;
+  height: 115px;
+  border-radius: 8px;
+  box-shadow: 5px 6px 0 #d7c39d;
+}
+
+.publication-card h3 {
+  line-height: 1.5;
+}
+
+.project-card {
+  max-width: 950px;
+  padding: 38px;
+  border-radius: 13px;
+  box-shadow: 0 12px 35px rgba(16,59,50,.06);
+  border-top: 4px solid var(--gold);
+  transition: .3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(16,59,50,.1);
+}
+
+.project-card p {
+  line-height: 1.9;
+  max-width: 700px;
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 25px;
+  background: var(--green);
+  color: white;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 7px 18px rgba(16,59,50,.17);
+  transition: .3s;
+}
+
+.project-btn:hover {
+  background: #c49a45;
+  color: white;
+  transform: translateY(-4px);
+}
+
+.project-btn .arrow {
+  font-size: 20px;
+}
+
+.contact {
+  background:
+    radial-gradient(circle at 80% 10%, rgba(197,164,109,.17), transparent 30%),
+    linear-gradient(120deg, #0b3028, #174d40);
+  padding: 90px 0;
+}
+
+.contact .section-label {
+  color: #dfc394;
+}
+
+.contact p {
+  line-height: 1.9;
+}
+
+footer {
+  padding: 30px 0;
+}
+
+.footer-content {
+  align-items: center;
+}
+
+/* Adaptação para telemóveis */
+
+@media (max-width: 760px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero {
+    padding: 75px 0;
+  }
+
+  .hero-panel {
+    max-width: 100%;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-card {
+    padding: 25px;
+  }
+
+  .project-card {
+    padding: 25px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-panel {
+    padding: 23px;
+  }
+
+  .quote {
+    padding: 25px;
+    font-size: 18px;
+  }
+}
     
   </style>
 </head>
 
 <body>
 
-  <header>
-    <nav class="container">
-      <a class="brand" href="#inicio">NZ<span>.</span> PORTFÓLIO</a>
+<header>
+  <nav class="container">
+    <a class="brand" href="#inicio">NZ<span>.</span> PORTFÓLIO</a>
 
-      <div class="nav-links">
-        <a href="#sobre">Sobre mim</a>
-        <a href="#areas">Áreas</a>
-        <a href="#publicacoes">Publicações</a>
-        <a href="#projectos">Projectos</a>
-      </div>
-    </nav>
-  </header>
+    <div class="nav-links">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#areas">Competências</a>
+      <a href="#publicacoes">Publicações</a>
+      <a href="#projectos">Projectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container">
-        <div class="eyebrow">Site Pessoal</div>
+<main>
 
-        <h1>Naira José Mateus <span>Zunguze</span></h1>
+  <!-- APRESENTAÇÃO PRINCIPAL -->
+
+  <section class="hero" id="inicio">
+    <div class="container hero-layout">
+
+      <div>
+        <div class="eyebrow">PORTFÓLIO PROFISSIONAL · 2026</div>
+
+        <h1>
+          Naira José Mateus
+          <span>Zunguze</span>
+        </h1>
 
         <p>
-         Site pessoal de Naira José Mateus Zunguze, profissional da área de Engenharia Informática e Tecnologias, dedicado à divulgação de trabalhos académicos, projectos tecnológicos e ao desenvolvimento de conhecimentos na área de Sistemas de Informação Geográfica (SIG).
+          Profissional da área de Engenharia Informática e Tecnologias,
+          com interesse no desenvolvimento de soluções digitais,
+          Sistemas de Informação Geográfica e gestão de dados.
+          Um espaço dedicado à partilha de conhecimentos,
+          projectos e experiências académicas e profissionais.
         </p>
 
         <div class="buttons">
-          <a class="btn btn-gold" href="#publicacoes">
-            Explorar publicações ↗
+          <a class="btn btn-gold" href="#projectos">
+            Explorar projectos ↗
           </a>
 
           <a class="btn btn-outline" href="#sobre">
@@ -538,177 +854,271 @@
           </a>
         </div>
       </div>
-    </section>
 
-    <section id="sobre">
-      <div class="container about-grid">
-        <div class="about-copy">
-          <div class="section-label">Apresentação</div>
-          <h2 class="section-title">Sobre mim</h2>
+      <div class="hero-panel">
+        <h3>Perfil profissional</h3>
 
-          <p>
-           Seja bem-vindo(a) ao meu site pessoal.
+        <p><strong>Formação</strong><br>
+        Engenharia Informática e Tecnologias</p>
 
-Este espaço tem como objectivo apresentar o meu percurso académico e profissional, disponibilizar trabalhos académicos, partilhar projectos desenvolvidos e divulgar conhecimentos, experiências e iniciativas nas áreas de Engenharia Informática, Tecnologias de Informação e Sistemas de Informação Geográfica (SIG).
-          </p>
+        <div class="panel-line"></div>
 
-          <p>
-            A minha formação em Engenharia Informática e Tecnologias, aliada à aprendizagem contínua na área dos Sistemas de Informação Geográfica (SIG), motiva-me a explorar e desenvolver soluções tecnológicas que contribuam para a gestão, análise e interpretação da informação, apoiando a tomada de decisões.
-          </p>
+        <p><strong>Áreas de interesse</strong><br>
+        Tecnologia · SIG · Gestão de Dados</p>
 
-          <p>
-          Este portefólio será actualizado periodicamente, com a inclusão de trabalhos académicos, projectos tecnológicos, publicações e outras realizações relevantes, acompanhando a evolução do meu percurso académico e profissional.
-          </p>
-        </div>
+        <div class="panel-line"></div>
 
-        <div class="quote">
-          Transformar conhecimento em soluções, através da
-          tecnologia, da informação e da inovação.
-        </div>
+        <p><strong>Foco</strong><br>
+        Inovação e desenvolvimento de soluções tecnológicas</p>
       </div>
-    </section>
-
-   
-<section class="areas" id="areas">
-  <div class="container">
-    <div class="section-label">Conhecimento e interesse</div>
-    <h2 class="section-title">Áreas de interesse</h2>
-
-   
-<p class="section-intro">
-  Áreas de conhecimento que reflectem a minha formação,
-  os meus interesses profissionais e o desenvolvimento
-  de competências nos domínios da tecnologia, informação e análise territorial.
-</p>
-
-    <div class="cards">
-
-      <article class="card">
-        <div class="card-icon">⌘</div>
-        <h3>Engenharia Informática e Tecnologias</h3>
-        <p>
-          Desenvolvimento de sistemas de informação,
-          aplicações informáticas, soluções digitais
-          e tecnologias de apoio à gestão da informação.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">⌖</div>
-        <h3>Sistemas de Informação Geográfica (SIG)</h3>
-        <p>
-          Análise espacial, informação territorial e utilização de
-          ferramentas geográficas para apoio à decisão.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">▤</div>
-        <h3>Gestão e Análise de Dados</h3>
-        <p>
-          Organização, tratamento, integração e análise
-          de dados para produção de informação útil
-          e suporte à tomada de decisão.
-        </p>
-      </article>
 
     </div>
-  </div>
-</section>
+  </section>
 
-    <section class="publications" id="publicacoes">
-      <div class="container">
-        <div class="section-label">Produção académica</div>
-        <h2 class="section-title">Publicações e documentos</h2>
 
-        <p class="section-intro">
-          Consulte os trabalhos disponibilizados neste espaço.
+  <!-- SOBRE MIM -->
+
+  <section id="sobre">
+    <div class="container about-grid">
+
+      <div class="about-copy">
+
+        <div class="section-label">APRESENTAÇÃO</div>
+
+        <h2 class="section-title">Sobre mim</h2>
+
+        <p>
+          Seja bem-vindo(a) ao meu portefólio profissional.
         </p>
 
-        <article class="publication-card">
-          <div class="document-icon">PDF</div>
+        <p>
+          Sou formada em Engenharia Informática e Tecnologias,
+          com interesse no desenvolvimento de sistemas de informação,
+          tecnologias digitais e soluções orientadas para a gestão
+          e análise da informação.
+        </p>
 
-          <div>
-            <span class="tag">Trabalho académico</span>
+        <p>
+          A minha formação em Engenharia Informática e Tecnologias, aliada à aprendizagem contínua na área dos Sistemas de Informação Geográfica (SIG), motiva-me a explorar e desenvolver soluções tecnológicas que contribuam para a gestão, análise e interpretação da informação, apoiando a tomada de decisões
+        </p>
 
-            <h3>Desenvolvimento de um sistema para dispositivos móveis de localização e avaliação de restaurantes: caso de estudo — distrito de Massinga</h3>
+        <p>
+          Este espaço reúne trabalhos académicos, projectos
+          tecnológicos, experiências e outras realizações
+          relevantes do meu percurso, constituindo também
+          uma plataforma de partilha de conhecimentos
+          e aprendizagem contínua.
+        </p>
 
-            <p>
-              Consulte a minha monografia em formato PDF.
-              O documento está disponível através do repositório
-              deste portfólio.
-            </p>
+      </div>
 
-            <a class="btn btn-green" href="./monografia.html">
-              Ver detalhes da monografia ↗
-            </a>
-          </div>
+      <div class="quote">
+        Transformar conhecimento em soluções,
+        através da tecnologia, da informação
+        e da inovação.
+
+        <small>Visão e desenvolvimento profissional</small>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ÁREAS DE INTERESSE -->
+
+  <section class="areas" id="areas">
+    <div class="container">
+
+      <div class="section-label">CONHECIMENTO E ESPECIALIZAÇÃO</div>
+
+      <h2 class="section-title">Áreas de interesse</h2>
+
+      <p class="section-intro">
+        Domínios que reflectem a minha formação académica,
+        interesses profissionais e desenvolvimento de competências.
+      </p>
+
+      <div class="cards">
+
+        <article class="card">
+          <div class="card-icon">⌘</div>
+
+          <h3>Engenharia Informática e Tecnologias</h3>
+
+          <p>
+            Desenvolvimento de sistemas de informação,
+            aplicações informáticas, soluções digitais
+            e tecnologias de apoio à gestão da informação.
+          </p>
         </article>
+
+
+        <article class="card">
+          <div class="card-icon">⌖</div>
+
+          <h3>Sistemas de Informação Geográfica</h3>
+
+          <p>
+            Análise espacial, cartografia digital,
+            gestão de informação territorial e utilização
+            de ferramentas geográficas para apoio à decisão.
+          </p>
+        </article>
+
+
+        <article class="card">
+          <div class="card-icon">▤</div>
+
+          <h3>Gestão e Análise de Dados</h3>
+
+          <p>
+            Organização, tratamento, integração e análise
+            de dados para produção de informação útil
+            e suporte à tomada de decisões.
+          </p>
+        </article>
+
       </div>
-    </section>
-
-   
-<section id="projectos">
-  <div class="container">
-    <div class="section-label">Trabalho e inovação</div>
-    <h2 class="section-title">Projectos e Soluções Tecnológicas</h2>
-
-    <p class="section-intro">
-      Espaço dedicado à apresentação de projectos,
-      sistemas de informação, aplicações e soluções
-      tecnológicas desenvolvidas ao longo do meu percurso
-      académico e profissional.
-    </p>
-
- 
-<article class="project-card">
-  <span class="tag">Projecto Tecnológico</span>
-
-  <h3>Sistema de Hotel Naira</h3>
-
-  <p>
-    Plataforma Digital destinada à apresentação de Serviços Hoteleiros,
-    incluindo informações sobre Quartos, Instalações, Reservas,
-    alojamento e outros serviços disponíveis.
-  </p>
-
-  <a href="https://nairajosezunguze-code.github.io/room_taste/"
-     target="_blank"
-     class="btn project-btn">
-    <span>Explorar Sistema </span>
-    <span class="arrow">↗</span>
-  </a>
-</article>
-
-    
-  </div>
-</section>
+    </div>
+  </section>
 
 
-    <section class="contact" id="contacto">
-      <div class="container">
-        <div class="section-label">Ligação profissional</div>
-        <h2 class="section-title">Conhecimento para partilhar</h2>
+  <!-- PUBLICAÇÕES -->
+
+  <section class="publications" id="publicacoes">
+    <div class="container">
+
+      <div class="section-label">PRODUÇÃO ACADÉMICA</div>
+
+      <h2 class="section-title">Publicações e documentos</h2>
+
+      <p class="section-intro">
+        Trabalhos académicos e documentos desenvolvidos
+        no âmbito da minha formação e percurso.
+      </p>
+
+      <article class="publication-card">
+
+        <div class="document-icon">PDF</div>
+
+        <div>
+
+          <span class="tag">MONOGRAFIA · ENGENHARIA INFORMÁTICA</span>
+
+          <h3>
+            Desenvolvimento de um sistema para dispositivos móveis
+            de localização e avaliação de restaurantes:
+            caso de estudo — Distrito de Massinga
+          </h3>
+
+          <p>
+            Trabalho académico dedicado ao desenvolvimento
+            de uma solução tecnológica para localização
+            e avaliação de estabelecimentos de restauração,
+            com aplicação ao distrito de Massinga.
+          </p>
+
+          <a class="btn btn-green" href="./monografia.html">
+            Consultar monografia ↗
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- PROJECTOS -->
+
+  <section id="projectos">
+    <div class="container">
+
+      <div class="section-label">TECNOLOGIA E INOVAÇÃO</div>
+
+      <h2 class="section-title">Projectos e soluções tecnológicas</h2>
+
+      <p class="section-intro">
+        Espaço dedicado à apresentação de sistemas de informação,
+        aplicações e soluções tecnológicas desenvolvidas
+        ao longo do meu percurso profissional.
+      </p>
+
+      <article class="project-card">
+
+        <span class="tag">PROJECTO TECNOLÓGICO · HOTELARIA</span>
+
+        <h3>Sistema de Hotel Naira</h3>
 
         <p>
-          Este portfólio constitui um espaço de divulgação
-          de trabalhos, ideias e recursos académicos e profissionais.
+          Plataforma digital destinada à apresentação
+          de serviços hoteleiros, incluindo informações
+          sobre quartos, instalações, reservas, alojamento
+          e outros serviços disponíveis.
         </p>
 
-        <a class="btn btn-gold" href="#inicio">
-          Voltar ao início ↑
-        </a>
-      </div>
-    </section>
-  </main>
+        <a href="https://nairajosezunguze-code.github.io/room_taste/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn project-btn">
 
-  <footer>
-    <div class="container footer-content">
-      <span>Naira José Mateus Zunguze</span>
-        <span>E-mail: nairajosezunguze@gmai.com</span>
-      <span>Portfólio profissional · 2026</span>
+          <span>Explorar Sistema de Hotel</span>
+          <span class="arrow">↗</span>
+
+        </a>
+
+      </article>
+
     </div>
-  </footer>
+  </section>
+
+
+  <!-- CONTACTO -->
+
+  <section class="contact" id="contacto">
+
+    <div class="container">
+
+      <div class="section-label">LIGAÇÃO PROFISSIONAL</div>
+
+      <h2 class="section-title">
+        Vamos partilhar conhecimento?
+      </h2>
+
+      <p>
+        Este espaço constitui uma plataforma de divulgação
+        de trabalhos, ideias, projectos e experiências.
+        A partilha de conhecimento e a inovação são
+        fundamentais para o desenvolvimento tecnológico.
+      </p>
+
+      <a class="btn btn-gold"
+         href="mailto:nairajosezunguze@gmai.com">
+        Entrar em contacto ✉
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- RODAPÉ -->
+
+<footer>
+  <div class="container footer-content">
+
+    <span>Naira José Mateus Zunguze</span>
+
+    <span>Engenharia Informática e Tecnologias</span>
+
+    <span>Portefólio Profissional · 2026</span>
+
+  </div>
+</footer>
 
 </body>
+  
 </html>
